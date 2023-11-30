@@ -5,7 +5,7 @@ public class lesson1 {
 
 
         System.out.println("Задача №1.1");
-        // место для вашего кода
+
         a = a + b;
         b = a - b;
         a = a - b;
