@@ -12,7 +12,10 @@ public class lesson4_4 {
         int x = in.nextInt();
 
         for (int i = 1; i < 10; i++) {
-            if (x % 2 == 1) {
+            if (x == i) {
+                System.out.println("числа равны!");
+            }
+            else if (x % 2 == 1) {
                 System.out.println(i + " + " + x + " = " + (i + x));
             }
             else {
