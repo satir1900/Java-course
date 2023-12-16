@@ -8,7 +8,7 @@ public class lesson5_3 {
         boolean simpal = true;
         int z = 0;
         for (int i = 2; (z < 10) ; i++) {
-            for (int y = 2; y < i; y++) {
+            for (int y = 2; y <= Math.sqrt(i); y++) {
                 if (i % y == 0) {
                       simpal = false;
                     break;
