@@ -19,7 +19,8 @@ public class lesson6_3 {
         int a = in.nextInt();
         System.out.print("Введите длину прямоугольника: ");
         int b = in.nextInt();
-        //int y;
+
+        in.close();
 
         for (int x = 1; x <= a + 2; x++){
             for (int y = 1; y <= b + 2; y++){
