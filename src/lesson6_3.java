@@ -5,12 +5,12 @@
 
 import java.util.Scanner;
 public class lesson6_3 {
-    static boolean first_last(int a1, int b1) {
-        return ((a1 == 1) || (a1 == b1 + 2));
+    static boolean isFirstOrLast(int a1, int b1) {
+        return (a1 == 1) || (a1 == b1 + 2);
     }
 
-    static boolean usl(int a1, int b1) {
-        return (a1 == b1 + 2);
+    static boolean isLast(int a1, int b1) {
+        return a1 == b1 + 2;
     }
     public static void main(String[] args) {
 
@@ -24,19 +24,19 @@ public class lesson6_3 {
         for (int x = 1; x <= a + 2; x++){
             for (int y = 1; y <= b + 2; y++){
 
-                if (first_last (x, a) && ((y == 1) || usl(y, b))){
+                if (isFirstOrLast(x, a) && ((y == 1) || isLast(y, b))){
                     System.out.print(" ");
                 }
-                else if (first_last (x, a) && ((y != 1) || usl(y, b))) {
+                else if (isFirstOrLast(x, a) && ((y != 1) || isLast(y, b))) {
                     System.out.print("-");
                 }
-                else if (first_last (y, b) && ((x != 1) && !usl(x, a))) {
+                else if (isFirstOrLast(y, b) && ((x != 1) && !isLast(x, a))) {
                     System.out.print("|");
                 }
                 else {
                     System.out.print(" ");
                 }
-                if (y == b + 2) {
+                if (isLast(y, b)) {
                     System.out.println();
                 }
             }
