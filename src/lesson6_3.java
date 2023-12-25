@@ -39,10 +39,8 @@ public class lesson6_3 {
                     //заполняем внутренности прямоугольника
                     System.out.print(" ");
                 }
-                if (y == b + 2) {
-                    System.out.println();
-                }
             }
+            System.out.println();
         }
 
     }
