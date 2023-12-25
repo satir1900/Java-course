@@ -23,11 +23,7 @@ public class lesson6_3 {
         for (int x = 1; x <= a + 2; x++){
             for (int y = 1; y <= b + 2; y++){
 
-                if (isFirstOrLast(x, a) && isFirstOrLast(y, b)){
-                    //если попали в угол
-                    System.out.print(" ");
-                }
-                else if (isFirstOrLast(x, a) && !isFirstOrLast(y, b)) {
+                if (isFirstOrLast(x, a) && !isFirstOrLast(y, b)) {
                     //если строка первая или последняя, а колонка не первая и не последняя
                     System.out.print("-");
                 }
@@ -36,7 +32,7 @@ public class lesson6_3 {
                     System.out.print("|");
                 }
                 else {
-                    //заполняем внутренности прямоугольника
+                    //попали в угол или заполняем внутренности прямоугольника
                     System.out.print(" ");
                 }
             }
