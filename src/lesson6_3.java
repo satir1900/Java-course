@@ -6,12 +6,10 @@
 import java.util.Scanner;
 public class lesson6_3 {
     static boolean isFirstOrLast(int a1, int b1) {
+        //проверяем координату она первая или последняя в наборе
         return (a1 == 1) || (a1 == b1 + 2);
     }
 
-    static boolean isLast(int a1, int b1) {
-        return a1 == b1 + 2;
-    }
     public static void main(String[] args) {
 
         Scanner in = new Scanner(System.in);
@@ -25,22 +23,27 @@ public class lesson6_3 {
         for (int x = 1; x <= a + 2; x++){
             for (int y = 1; y <= b + 2; y++){
 
-                if (isFirstOrLast(x, a) && ((y == 1) || isLast(y, b))){
+                if (isFirstOrLast(x, a) && isFirstOrLast(y, b)){
+                    //если попали в угол
                     System.out.print(" ");
                 }
-                else if (isFirstOrLast(x, a) && ((y != 1) || isLast(y, b))) {
+                else if (isFirstOrLast(x, a) && !isFirstOrLast(y, b)) {
+                    //если строка первая или последняя, а колонка не первая и не последняя
                     System.out.print("-");
                 }
-                else if (isFirstOrLast(y, b) && ((x != 1) && !isLast(x, a))) {
+                else if (isFirstOrLast(y, b) && !isFirstOrLast(x, a)) {
+                    //если колонка первая или последняя, а строка не первая и не последняя
                     System.out.print("|");
                 }
                 else {
+                    //заполняем внутренности прямоугольника
                     System.out.print(" ");
                 }
-                if (isLast(y, b)) {
+                if (y == b + 2) {
                     System.out.println();
                 }
             }
         }
+
     }
 }
