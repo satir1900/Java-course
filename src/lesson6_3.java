@@ -39,5 +39,21 @@ public class lesson6_3 {
             System.out.println();
         }
 
+        //Второй вариант---------------------------------
+
+        String row1 = " ";
+        String row2 = "|";
+        for(int i = 1; i <= b; i++){
+            row1 = row1 + "-";
+            row2 = row2 + " ";
+        }
+        row1 = row1 + " ";
+        row2 = row2 + "|";
+
+        System.out.println(row1);
+        for (int i = 0; i < a; i++) {
+            System.out.println(row2);
+        }
+        System.out.println(row1);
     }
 }
