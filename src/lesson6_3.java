@@ -5,10 +5,6 @@
 
 import java.util.Scanner;
 public class lesson6_3 {
-    static boolean isFirstOrLast(int a1, int b1) {
-        //проверяем координату она первая или последняя в наборе
-        return (a1 == 1) || (a1 == b1 + 2);
-    }
 
     public static void main(String[] args) {
 
@@ -56,4 +52,10 @@ public class lesson6_3 {
         }
         System.out.println(row1);
     }
+
+    static boolean isFirstOrLast(int a1, int b1) {
+        //проверяем координату она первая или последняя в наборе
+        return (a1 == 1) || (a1 == b1 + 2);
+    }
+
 }
