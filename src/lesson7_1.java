@@ -16,7 +16,6 @@ public class lesson7_1 {
     public static void main (String args[]){
         sumStrings("2","1");
         sumStrings();
-
     }
 
 }
